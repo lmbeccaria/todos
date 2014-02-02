@@ -5,10 +5,10 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'high_voltage'
 
-group :test, :development do
+group :local, :test, :development do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara', '1.1.4'
   gem 'spring'
