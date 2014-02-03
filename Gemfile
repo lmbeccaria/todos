@@ -16,6 +16,10 @@ group :local, :test, :development do
   gem 'pry'
 end
 
+group :test do
+  gem 'factory_girl_rails', '4.0'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
