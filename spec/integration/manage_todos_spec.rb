@@ -12,7 +12,7 @@ feature 'Manage todos' do
 
   scenario 'view only my todos' do
     Todo.create(description: 'Buy some eggs', owner_email: 'not_me@example.com')
-    sign_in
+    sign_in_as 'me@example.com'
 
     click_link 'Add a new todo'
     fill_in 'Description', with: 'Buy some milk'
@@ -21,5 +21,4 @@ feature 'Manage todos' do
     expect(page).to have_css 'li.todo', text: 'Buy some milk'
     expect(page).not_to have_css 'li.todo', text: 'Buy some eggs'
   end
-
 end

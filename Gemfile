@@ -13,6 +13,7 @@ group :local, :test, :development do
   gem 'capybara', '1.1.4'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'pry'
 end
 
 # Gems used only for assets and not required
